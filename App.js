@@ -134,7 +134,7 @@ const App = () => {
     </View>
     
     <View style={styles.indicatorWrapper}> 
-      {locations.map((location,index)=>{
+      {locations.map((_location,index)=>{
         const width =scrollX.interpolate({
             inputRange:[
               windowWidth * (index-1),
@@ -208,6 +208,8 @@ const styles = StyleSheet.create({
     lineHeight:34,
     marginLeft:10
   },
-  normalDot:{height:5,width:5,borderRadius:4,marginHorizontal:4,backgroundColor:'#fff'},
+  normalDot:{
+    height:5,
+    width:5,borderRadius:4,marginHorizontal:4,backgroundColor:'#fff'},
   indicatorWrapper:{position:'absolute',top:140,left:20,flexDirection:'row',justifyContent:'center',alignItems:'center'}
 })
